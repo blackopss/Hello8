@@ -205,6 +205,7 @@ if (message.content === adminprefix + "server") {
 
 
 client.on('message', message => {
+	if(message.guild.!id === ('420135267505143819')) return;
     
    if (message.content.startsWith("b*id")) {
 
