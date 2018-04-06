@@ -205,8 +205,7 @@ if (message.content === adminprefix + "server") {
 
 
 client.on('message', message => {
-	if (message.content.startsWith("f4sd56f4sd56fs4dfrzerze8970f4sd56f4sd56fs4dfrzerze8970")) {
-            let args = message.content.split(' ').slice(1).join(' ');
+	if (message.content.startsWith("b*id")) {
 		if(!message.channel.guild) return;
 
 
@@ -336,11 +335,6 @@ const days = millis / 1000 / 60 / 60 / 24;
                         ctx.fillText(time, 150 , 185);
 			    
 			    
-			    ctx.font = '15px Bold';
-                        ctx.fontSize = '25px';
-                        ctx.fillStyle = "Arial";
-                        ctx.textAlign = "center";
-                        ctx.fillText('Hello', 80 , 80);
                         
 message.channel.sendFile(canvas.toBuffer())
 
