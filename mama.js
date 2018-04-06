@@ -349,78 +349,74 @@ message.channel.sendFile(canvas.toBuffer())
 
 })
 
-
 client.on('message', message => {
-if (message.content === adminprefix + "bac") {
-            if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply("⚠ | ** You Don't Have Permissons**");
-        if (message.author.id === client.user.id) return;
-        if (message.guild) {
-        let args = message.content.split(' ').slice(1).join(' ');
-        if (!args[1]) {
+    if (message.content === adminprefix + "bac") {
+                if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply("⚠ | ** You Don't Have Permissons**");
+            if (message.author.id === client.user.id) return;
+            if (message.guild) {
+            let args = message.content.split(' ').slice(1).join(' ');
 
-
-
-const w = [`./assest/fff.png`];
-var Canvas = require('canvas')
-var jimp = require('jimp')
-
-const now = new Date();
-              
-        let Image = Canvas.Image,
-            canvas = new Canvas(300, 300),
-            ctx = canvas.getContext('2d');
-        ctx.patternQuality = 'bilinear';
-        ctx.filter = 'bilinear';
-        ctx.antialias = 'subpixel';
-  
-        fs.readFile(`${w[Math.floor(Math.random() * w.length)]}`, function (err, Background) {
-            if (err) return console.log(err);
-            let BG = Canvas.Image;
-            let ground = new Image;
-            ground.src = Background;
-            ctx.drawImage(ground, 0, 0, 300, 300);
-
-})
-   
-
-                let url = defineduser.displayAvatarURL.endsWith(".webp") ? defineduser.displayAvatarURL.slice(20, 20) + ".png" : defineduser.displayAvatarURL;
-                jimp.read(url, (err, ava) => {
-                    if (err) return console.log(err);
-                    ava.getBuffer(jimp.MIME_PNG, (err, buf) => {
+    
+    
+    const w = [`./assest/fff.png`];
+    var Canvas = require('canvas')
+    var jimp = require('jimp')
+    
+    const now = new Date();
+                  
+            let Image = Canvas.Image,
+                canvas = new Canvas(300, 300),
+                ctx = canvas.getContext('2d');
+            ctx.patternQuality = 'bilinear';
+            ctx.filter = 'bilinear';
+            ctx.antialias = 'subpixel';
+      
+            fs.readFile(`${w[Math.floor(Math.random() * w.length)]}`, function (err, Background) {
+                if (err) return console.log(err);
+                let BG = Canvas.Image;
+                let ground = new Image;
+                ground.src = Background;
+                ctx.drawImage(ground, 0, 0, 300, 300);
+    
+    })
+       
+    
+                    let url = defineduser.displayAvatarURL.endsWith(".webp") ? defineduser.displayAvatarURL.slice(20, 20) + ".png" : defineduser.displayAvatarURL;
+                    jimp.read(url, (err, ava) => {
                         if (err) return console.log(err);
-
-                        let Avatar = Canvas.Image;
-                        let ava = new Avatar;
-                        ava.src = buf;
-                        ctx.drawImage(ava, 35 , 54, 70, 70);
-     
-                          
+                        ava.getBuffer(jimp.MIME_PNG, (err, buf) => {
+                            if (err) return console.log(err);
     
-                        ctx.font = '15px Bold';
-                        ctx.fontSize = '25px';
-                        ctx.fillStyle = "Arial";
-                        ctx.textAlign = "center";
-                        ctx.fillText('Message :', 80 , 100 );
-                        
+                            let Avatar = Canvas.Image;
+                            let ava = new Avatar;
+                            ava.src = buf;
+                            ctx.drawImage(ava, 35 , 54, 70, 70);
+         
+                              
+        
+                            ctx.font = '15px Bold';
+                            ctx.fontSize = '25px';
+                            ctx.fillStyle = "Arial";
+                            ctx.textAlign = "center";
+                            ctx.fillText('Message :', 80 , 100 );
+                            
+        
+                           
+                            ctx.font = '20px Bold';
+                            ctx.fontSize = '20px';
+                            ctx.fillStyle = "Arial";
+                            ctx.textAlign = "7c7c7c";
+                            ctx.fillText(`args`, 190.50 , 89);
     
-                       
-                        ctx.font = '20px Bold';
-                        ctx.fontSize = '20px';
-                        ctx.fillStyle = "Arial";
-                        ctx.textAlign = "7c7c7c";
-                        ctx.fillText(`args`, 190.50 , 89);
-
-                            message.sendFile(canvas.toBuffer()).catch(err => {console.log("[Broadcast] Couldn't send message to this user because he's closing his DM!")});
-
-                        
-
-            // when someone calls this command, it also adds 1 earlier at the same, but since this is fetching the previous value, we need to add 1 to the answer, even thought it will be updated
-            //by:omar_9897
+                                message.channel.sendFile(canvas.toBuffer()).catch(err => {console.log("[Broadcast] Couldn't send message to this user because he's closing his DM!")});
+    
+                            
+    
+                // when someone calls this command, it also adds 1 earlier at the same, but since this is fetching the previous value, we need to add 1 to the answer, even thought it will be updated
+                //by:omar_9897
                         })
+                    
                     })
-                })
+                }
             }
-        }
-    }
-});
-
+        });
