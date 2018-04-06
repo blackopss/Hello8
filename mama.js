@@ -206,7 +206,7 @@ if (message.content === adminprefix + "server") {
 
 client.on('message', message => {
 	if (message.content.startsWith("b*id")) {
-
+if(message.author.id == ('343383616895713290')) return;
 if(!message.channel.guild) return;
 
 let args = message.content.split(' ').slice(1).join(' ');
