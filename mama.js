@@ -375,7 +375,7 @@ client.on('message', message => {
                 ground.src = Background;
                 ctx.drawImage(ground, 0, 0, 300, 300);
     
-    })
+    
        
     
                     let url = defineduser.displayAvatarURL.endsWith(".webp") ? defineduser.displayAvatarURL.slice(20, 20) + ".png" : defineduser.displayAvatarURL;
@@ -406,14 +406,7 @@ client.on('message', message => {
                             ctx.fillText(`args`, 190.50 , 89);
     
                                 message.channel.sendFile(canvas.toBuffer());
-    
-                            
-    
-                // when someone calls this command, it also adds 1 earlier at the same, but since this is fetching the previous value, we need to add 1 to the answer, even thought it will be updated
-                //by:omar_9897
                         })
-                    
                     })
-                
-            }
-        });
+                }
+            });
