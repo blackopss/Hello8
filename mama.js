@@ -351,13 +351,12 @@ message.channel.sendFile(canvas.toBuffer())
 
 
 client.on('message', message => {
-if(message.content.split(' ')[0] == adminprefix + 'b*c') {
+if (message.content === adminprefix + "bac") {
             if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply("⚠ | ** You Don't Have Permissons**");
         if (message.author.id === client.user.id) return;
         if (message.guild) {
         let args = message.content.split(' ').slice(1).join(' ');
         if (!args[1]) {
-    message.channel.send(`**${adminprefix}bc <message>**`); return;
 
 
 
