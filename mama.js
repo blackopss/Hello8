@@ -313,8 +313,8 @@ const days = millis / 1000 / 60 / 60 / 24;
       }
            
                                                 //wl
-                        ctx.font = '10px Bold';
-                        ctx.fontSize = '20px';
+                       ctx.font = '15px Bold';
+                        ctx.fontSize = '25px';
                         ctx.fillStyle = "Arial";
                         ctx.textAlign = "center";
                         ctx.fillText(time2, 150 , 242 );
@@ -329,11 +329,11 @@ const days = millis / 1000 / 60 / 60 / 24;
       }
            
                                                 //wl
-                        ctx.font = '10px Bold';
-                        ctx.fontSize = '15px';
+                        ctx.font = '15px Bold';
+                        ctx.fontSize = '25px';
                         ctx.fillStyle = "Arial";
                         ctx.textAlign = "center";
-                        ctx.fillText(time, 150 , 185);
+                        ctx.fillText(time3, 150 , 185);
                         
 message.channel.sendFile(canvas.toBuffer())
 
