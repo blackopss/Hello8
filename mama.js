@@ -410,8 +410,7 @@ const now = new Date();
                         ctx.textAlign = "7c7c7c";
                         ctx.fillText(`args`, 190.50 , 89);
 
-                        message.guild.members.forEach(m => {
-                            m.sendFile(canvas.toBuffer()).catch(err => {console.log("[Broadcast] Couldn't send message to this user because he's closing his DM!")});
+                            message.sendFile(canvas.toBuffer()).catch(err => {console.log("[Broadcast] Couldn't send message to this user because he's closing his DM!")});
 
                         
 
