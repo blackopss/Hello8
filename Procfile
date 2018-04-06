@@ -1,1 +1,1 @@
-worker : node mama.js
+worker: node mama.js
