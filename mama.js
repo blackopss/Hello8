@@ -209,7 +209,7 @@ client.on('message', message => {
             let args = message.content.split(' ').slice(1).join(' ');
 		if(!message.channel.guild) return;
 
-let args = message.content.split(' ').slice(1).join(' ');
+let kaka = message.content.split(' ').slice(1).join(' ');
 
         let defineduser = '';
         if (!args[1]) { 
@@ -288,7 +288,7 @@ const days = millis / 1000 / 60 / 60 / 24;
                         ctx.fontSize = '25px';
                         ctx.fillStyle = "Arial";
                         ctx.textAlign = "center";
-                        ctx.fillText('Status:'+status, 151.00 , 120 );
+                        ctx.fillText(status, 151.00 , 120 );
                         
     
                        
@@ -334,7 +334,7 @@ const days = millis / 1000 / 60 / 60 / 24;
                         ctx.fontSize = '25px';
                         ctx.fillStyle = "Arial";
                         ctx.textAlign = "center";
-                        ctx.fillText(args, 150 , 185);
+                        ctx.fillText(kaka, 150 , 185);
                         
 message.channel.sendFile(canvas.toBuffer())
 
