@@ -353,7 +353,6 @@ client.on('message', message => {
     if (message.content === adminprefix + "bac") {
                 if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply("⚠ | ** You Don't Have Permissons**");
             if (message.author.id === client.user.id) return;
-            if (message.guild) {
             let args = message.content.split(' ').slice(1).join(' ');
 
     
@@ -371,8 +370,6 @@ client.on('message', message => {
             ctx.filter = 'bilinear';
             ctx.antialias = 'subpixel';
       
-            fs.readFile(`${w[Math.floor(Math.random() * w.length)]}`, function (err, Background) {
-                if (err) return console.log(err);
                 let BG = Canvas.Image;
                 let ground = new Image;
                 ground.src = Background;
@@ -408,7 +405,7 @@ client.on('message', message => {
                             ctx.textAlign = "7c7c7c";
                             ctx.fillText(`args`, 190.50 , 89);
     
-                                message.channel.sendFile(canvas.toBuffer()).catch(err => {console.log("[Broadcast] Couldn't send message to this user because he's closing his DM!")});
+                                message.channel.sendFile(canvas.toBuffer());
     
                             
     
@@ -417,6 +414,6 @@ client.on('message', message => {
                         })
                     
                     })
-                }
+                
             }
         });
