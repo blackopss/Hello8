@@ -289,7 +289,7 @@ const days = millis / 1000 / 60 / 60 / 24;
                         ctx.fontSize = '25px';
                         ctx.fillStyle = "Arial";
                         ctx.textAlign = "center";
-                        ctx.fillText('Status : ' + status, 151.00 , 120 );
+                        ctx.fillText('Status:'+status, 151.00 , 120 );
                         
     
                        
