@@ -222,7 +222,7 @@ let args = message.content.split(' ').slice(1).join(' ');
 
      
      
-const w = [`./assets/fff.png`];
+const w = [`./assest/fff.png`];
 var Canvas = require('canvas')
 var jimp = require('jimp')
 
