@@ -92,9 +92,9 @@ return `${days > 0 ? `${days}:` : ''}${(hours || days) > 0 ? `${hours}:` : ''}${
 }
 
 
-client.on("message", msg => {
+client.on("message", messege => {
 	
-if(msg.content.startsWith (adminprefix+ "id")) {
+if(message.content.startsWith (adminprefix+ "id")) {
 	var year = message.author.createdAt.getFullYear()
         var month = message.author.createdAt.getMonth()
         var day = message.author.createdAt.getDate()
@@ -137,7 +137,7 @@ if(!msg.channel.guild) return msg.reply('**:x: Sorry This Command is Only For Se
      
         
         message.channel.send({embed});
-            if (!message) return message.reply('**Please Provide A Mention  ❌ **').catch(console.error);
+            if (!messsage) return message.reply('**Please Provide A Mention  ❌ **').catch(console.error);
   }
 });
 
