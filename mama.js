@@ -121,12 +121,12 @@ if(msg.content.startsWith (adminprefix+ "id")) {
         }else {
         var w = 'Human';
 if(!msg.channel.guild) return msg.reply('**:x: Sorry This Command is Only For Servers **');         
-      const embed = new Discord.RichEmbed();
-  embed.addField(":cloud_tornado:  Name", `**[ ${msg.author.username}#${msg.author.discriminator} ]**`, true)
+      const embed = new Discord.RichEmbed()
+ .addField(":cloud_tornado:  Name", `**[ ${msg.author.username}#${msg.author.discriminator} ]**`, true)
           .addField(":id:  ID", `**[ ${msg.author.id} ]**`, true)
           .setColor("RANDOM")
+        .setFooter(message.author.username, message.author.avatarURL)
           .setTimestamp()
-          .setURL(`${msg.author.avatarURL}`)
 		.addField('📆 | Created At: ', "**" + year + "-"+ month +"-"+ day + "**", true)
 		        .addField('🤖 | User:',"**"+ w + "**",true)    
         .addField("⌚ | Joined In", "**" + message.member.joinedAt.toLocaleString() + "**", true)   
@@ -134,8 +134,7 @@ if(!msg.channel.guild) return msg.reply('**:x: Sorry This Command is Only For Se
           .addField(':game_die:    Playing', `**[ ${msg.author.presence.game === null ? "No Game" : msg.author.presence.game.name} ]**`, true)
           .addField(':rocket:   Role', `**[ ${msg.member.roles.filter(r => r.name).size} ]**`, true)
   .addField(':robot:  Bot', `**[ ${msg.author.bot.toString().toUpperCase()} ]**`, true);
-      .setThumbnail(`${z.avatarURL}`)
-        .setFooter(message.author.username, message.author.avatarURL)
+     
         
         message.channel.send({embed});
             if (!message) return message.reply('**Please Provide A Mention  ❌ **').catch(console.error);
