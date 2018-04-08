@@ -92,9 +92,9 @@ return `${days > 0 ? `${days}:` : ''}${(hours || days) > 0 ? `${hours}:` : ''}${
 }
 
 
-client.on("message", msg => {
+client.on("message", message => {
 	
-if(msg.content.startsWith (adminprefix+ "id")) {
+      if(message.content.startsWith(adminprefix + 'id')) {
 	var year = message.author.createdAt.getFullYear()
         var month = message.author.createdAt.getMonth()
         var day = message.author.createdAt.getDate()
@@ -120,22 +120,16 @@ if(msg.content.startsWith (adminprefix+ "id")) {
         var w = 'Bot';
         }else {
         var w = 'Human';
-if(!msg.channel.guild) return msg.reply('**:x: Sorry This Command is Only For Servers **');         
+if(!message.channel.guild) return message.reply('**:x: Sorry This Command is Only For Servers **');         
       const embed = new Discord.RichEmbed()
- .addField(":cloud_tornado:  Name", `**[ ${msg.author.username}#${msg.author.discriminator} ]**`, true)
-          .addField(":id:  ID", `**[ ${msg.author.id} ]**`, true)
-          .setColor("RANDOM")
+        .setColor("RANDOM")
+        .setThumbnail(`${z.avatarURL}`)
         .setFooter(message.author.username, message.author.avatarURL)
-          .setTimestamp()
-		.addField('📆 | Created At: ', "**" + year + "-"+ month +"-"+ day + "**", true)
-		        .addField('🤖 | User:',"**"+ w + "**",true)    
+        .setTimestamp()
+        .addField(':cloud_tornado:  | Name:',`**<@` + `${z.id}` + `>**`, true)
+        .addField('📆 | Created At: ', "**" + year + "-"+ month +"-"+ day + "**", true)
+        .addField('🤖 | User:',"**"+ w + "**",true)    
         .addField("⌚ | Joined In", "**" + message.member.joinedAt.toLocaleString() + "**", true)   
-          .addField(':spy:  Status', `**[ ${msg.author.presence.status.toUpperCase()} ]**`, true)
-          .addField(':game_die:    Playing', `**[ ${msg.author.presence.game === null ? "No Game" : msg.author.presence.game.name} ]**`, true)
-          .addField(':rocket:   Role', `**[ ${msg.member.roles.filter(r => r.name).size} ]**`, true)
-  .addField(':robot:  Bot', `**[ ${msg.author.bot.toString().toUpperCase()} ]**`, true);
-     
-        
         message.channel.send({embed});
             if (!messsage) return message.reply('**Please Provide A Mention  ❌ **').catch(console.error);
 	}
