@@ -131,6 +131,8 @@ if(!message.channel.guild) return message.reply('**:x: Sorry This Command is Onl
         .addField('🤖 | User:',"**"+ w + "**",true)    
         .addField("⌚ | Joined In", "**" + message.member.joinedAt.toLocaleString() + "**", true)   
         message.channel.send({embed});
+		            if (!message) return message.reply('**ضع المينشان بشكل صحيح  ❌ **').catch(console.error);
+
 	}
 	}
 });
