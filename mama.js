@@ -92,9 +92,9 @@ return `${days > 0 ? `${days}:` : ''}${(hours || days) > 0 ? `${hours}:` : ''}${
 }
 
 
-client.on("message", messege => {
+client.on("message", msg => {
 	
-if(message.content.startsWith (adminprefix+ "id")) {
+if(msg.content.startsWith (adminprefix+ "id")) {
 	var year = message.author.createdAt.getFullYear()
         var month = message.author.createdAt.getMonth()
         var day = message.author.createdAt.getDate()
