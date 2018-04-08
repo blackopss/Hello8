@@ -138,7 +138,8 @@ if(!msg.channel.guild) return msg.reply('**:x: Sorry This Command is Only For Se
         
         message.channel.send({embed});
             if (!messsage) return message.reply('**Please Provide A Mention  ❌ **').catch(console.error);
-  }
+	}
+	}
 });
 
 
