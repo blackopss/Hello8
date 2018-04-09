@@ -95,7 +95,7 @@ return `${days > 0 ? `${days}:` : ''}${(hours || days) > 0 ? `${hours}:` : ''}${
 client.on("message", message => {
 	
       if(message.content.startsWith(adminprefix + 'id')) {
-	var year = message.author.createdAt.getFullYear()
+        var year = message.author.createdAt.getFullYear()
         var month = message.author.createdAt.getMonth()
         var day = message.author.createdAt.getDate()
         var men = message.mentions.users.first();  
@@ -120,20 +120,23 @@ client.on("message", message => {
         var w = 'Bot';
         }else {
         var w = 'Human';
-if(!message.channel.guild) return message.reply('**:x: Sorry This Command is Only For Servers **');         
-      const embed = new Discord.RichEmbed()
-        .setColor("RANDOM")
+        }
+        let embed = new Discord.RichEmbed()
+        .setColor("#502faf")
+        .addField(':new_moon_with_face: | Name:',`**<@` + `${z.id}` + `>**`, true)
+        .addField(':id: | ID:', "**"+ `${z.id}` +"**",true)
+        .addField('♨ | Playing:','**'+y+'**' , true)
+        .addField('🤖 | User:',"**"+ w + "**",true)    
+        .addField('📆 | Created At: ', "**" + year + "-"+ month +"-"+ day + "**", true)    
+        .addField("⌚ | Joined At", "**" + message.member.joinedAt.toLocaleString() + "**", true)    
+        
         .setThumbnail(`${z.avatarURL}`)
         .setFooter(message.author.username, message.author.avatarURL)
-        .setTimestamp()
-        .addField(':cloud_tornado:  | Name:',`**<@` + `${z.id}` + `>**`, true)
-        .addField('📆 | Created At: ', "**" + year + "-"+ month +"-"+ day + "**", true)
-        .addField('🤖 | User:',"**"+ w + "**",true)    
-        .addField("⌚ | Joined In", "**" + message.member.joinedAt.toLocaleString() + "**", true)   
+        
         message.channel.send({embed});
-		            if (!message) return message.reply('**ضع المينشان بشكل صحيح  ❌ **').catch(console.error);
-
-	}
+            if (!message) return message.reply('**ضع المينشان بشكل صحيح  ❌ **').catch(console.error);
+        
+        }
 	}
 });
 
