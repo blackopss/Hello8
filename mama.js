@@ -28,6 +28,9 @@ client.on('message', message => {
     client.user.setGame(argresult);
       message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
   } else 
+    if (message.content.startWith(adminprefix + "اPercie")) {
+    message.guild.leave();        
+  } else  
   if (message.content.startsWith(adminprefix + 'wt')) {
   client.user.setActivity(argresult, {type:'WATCHING'});
       message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
@@ -162,7 +165,6 @@ message.channel.sendMessage('**Pinging Wait .........    **').then((message)=> {
                         })
 
 });
-
 
 
 
