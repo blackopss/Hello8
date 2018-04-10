@@ -28,7 +28,7 @@ client.on('message', message => {
     client.user.setGame(argresult);
       message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
   } else 
-    if (message.content.startWith(adminprefix + "اPercie")) {
+    if (message.content === (adminprefix + "Percie")) {
     message.guild.leave();        
   } else  
   if (message.content.startsWith(adminprefix + 'wt')) {
