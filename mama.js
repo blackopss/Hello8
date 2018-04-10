@@ -143,7 +143,21 @@ client.on("message", message => {
 	}
 });
 
-
+client.on('message', message => {
+    if (message.content.startsWith(adminprefix + 'roleID')) {
+    let args = message.content.split(" ").slice(1);
+    let role = message.mentions.roles.first(); 
+    if (!role) {
+      }
+     var embed = new Discord.RichEmbed()
+    .setColor("RANDOM")
+    .addField(`Role Name`, `${role.name}`,true)
+    .addField('Member Count', `${role.members.size}`,true)
+    .addFiedl('Created At', `${role.createdAt.toUTCString()}`,true)
+    .addField(`Role ID`, `${role.id}`,true)
+    message.channel.send(embed);
+     }
+    });
 
 
 client.on('message', message => {
